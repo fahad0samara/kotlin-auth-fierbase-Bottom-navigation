@@ -36,11 +36,12 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.fahad.auth_fierbase_bottomnavigation.ui.screen.RootNavigationGraph
+
 import com.fahad.auth_fierbase_bottomnavigation.ui.screen.login.LoginScreen
 import com.fahad.auth_fierbase_bottomnavigation.ui.screen.login.LoginViewModel
+import com.fahad.auth_fierbase_bottomnavigation.ui.screen.navigation.RootNavigation
 
-import com.fahad.auth_fierbase_bottomnavigation.ui.screen.profile.EditProfileScreen
+import com.fahad.auth_fierbase_bottomnavigation.ui.screen.bottomScreen.profile.EditProfileScreen
 import com.fahad.auth_firebase.ui.screen.profile.ProfileScreen
 
 import com.fahad.auth_fierbase_bottomnavigation.ui.screen.register.RegisterScreen
@@ -77,7 +78,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background
                 ) {
 
-                  RootNavigationGraph(navController = rememberNavController())
+                  RootNavigation(navController = rememberNavController())
 
 
                 }

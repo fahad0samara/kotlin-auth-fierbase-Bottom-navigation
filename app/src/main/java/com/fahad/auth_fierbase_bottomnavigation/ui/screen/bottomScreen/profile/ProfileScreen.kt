@@ -39,7 +39,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.fahad.auth_fierbase_bottomnavigation.ui.AuthScreen
 import com.fahad.auth_fierbase_bottomnavigation.ui.UserDataViewModel
 import com.fahad.auth_fierbase_bottomnavigation.util.Button.LoadingButton
 import com.fahad.auth_fierbase_bottomnavigation.util.snackBar.SnackbarWrapperProfile
@@ -130,7 +129,7 @@ fun ProfileScreen(
             Spacer(modifier = Modifier.height(16.dp))
 
             Button(
-                onClick = {  navController.navigate(AuthScreen.EditProfile.route) },
+                onClick = { navController.navigate("edit_profile") },
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(50.dp),

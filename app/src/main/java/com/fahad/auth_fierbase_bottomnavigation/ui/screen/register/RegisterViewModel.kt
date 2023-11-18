@@ -8,7 +8,7 @@ import androidx.navigation.NavController
 import com.fahad.auth_fierbase_bottomnavigation.domain.model.Response
 import com.fahad.auth_fierbase_bottomnavigation.domain.model.User
 import com.fahad.auth_fierbase_bottomnavigation.domain.repository.AuthRepository
-import com.fahad.auth_fierbase_bottomnavigation.ui.AuthScreen
+import com.fahad.auth_fierbase_bottomnavigation.ui.screen.navigation.auth.AuthScreen
 import com.fahad.auth_fierbase_bottomnavigation.ui.UserDataViewModel
 
 import dagger.hilt.android.lifecycle.HiltViewModel

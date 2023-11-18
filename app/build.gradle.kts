@@ -102,7 +102,9 @@ dependencies {
 
 
 
-    //firebase
+
+
+  //firebase
     implementation(platform("com.google.firebase:firebase-bom:32.5.0"))
     //noinspection UseTomlInstead
     implementation("com.google.firebase:firebase-analytics-ktx")

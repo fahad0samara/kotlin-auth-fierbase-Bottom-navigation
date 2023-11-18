@@ -1,4 +1,4 @@
-package com.fahad.auth_fierbase_bottomnavigation.ui.screen.profile
+package com.fahad.auth_fierbase_bottomnavigation.ui.screen.bottomScreen.profile
 
 import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult

@@ -1,21 +1,19 @@
-package com.fahad.auth_fierbase_bottomnavigation.ui
+package com.fahad.auth_fierbase_bottomnavigation.ui.screen.navigation.auth
 
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
-import com.fahad.auth_fierbase_bottomnavigation.ui.screen.Graph
+import com.fahad.auth_fierbase_bottomnavigation.ui.LoadingScreen
 import com.fahad.auth_fierbase_bottomnavigation.ui.screen.login.LoginScreen
 import com.fahad.auth_fierbase_bottomnavigation.ui.screen.login.LoginViewModel
-import com.fahad.auth_fierbase_bottomnavigation.ui.screen.profile.EditProfileScreen
+import com.fahad.auth_fierbase_bottomnavigation.ui.screen.navigation.Graph
 import com.fahad.auth_fierbase_bottomnavigation.ui.screen.register.RegisterScreen
 import com.fahad.auth_fierbase_bottomnavigation.ui.screen.register.RegisterViewModel
-import com.fahad.auth_firebase.ui.screen.profile.ProfileScreen
 
-fun NavGraphBuilder.authNavGraph(navController: NavHostController,
+fun NavGraphBuilder.AuthNavigation(navController: NavHostController,
                                  loginViewModel: LoginViewModel,
-                                 registerViewModel: RegisterViewModel,
-                                 userDataViewModel: UserDataViewModel) {
+                                 registerViewModel: RegisterViewModel ) {
 
   navigation(
     route = Graph.AUTHENTICATION,
@@ -25,7 +23,7 @@ fun NavGraphBuilder.authNavGraph(navController: NavHostController,
 
   {
     composable("splash") {
-      SplashScreen()
+      com.fahad.auth_fierbase_bottomnavigation.ui.SplashScreen()
     }
     composable("loading") {
       // Show loading screen while checking authentication state
@@ -41,16 +39,7 @@ fun NavGraphBuilder.authNavGraph(navController: NavHostController,
         navController = navController, registerViewModel = registerViewModel
       )
     }
-    composable(route = AuthScreen.Profile.route) {
-      ProfileScreen(
-        navController = navController, userDataViewModel = userDataViewModel
-      )
-    }
-    composable(route = AuthScreen.EditProfile.route) {
-      EditProfileScreen(
-        navController = navController, userDataViewModel = userDataViewModel
-      )
-    }
+
   }
 }
 
