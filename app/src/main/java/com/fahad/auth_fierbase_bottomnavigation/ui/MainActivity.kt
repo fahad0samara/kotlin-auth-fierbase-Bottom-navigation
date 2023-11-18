@@ -36,13 +36,16 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.fahad.auth_fierbase_bottomnavigation.ui.screen.RootNavigationGraph
 import com.fahad.auth_fierbase_bottomnavigation.ui.screen.login.LoginScreen
 import com.fahad.auth_fierbase_bottomnavigation.ui.screen.login.LoginViewModel
+
 import com.fahad.auth_fierbase_bottomnavigation.ui.screen.profile.EditProfileScreen
 import com.fahad.auth_firebase.ui.screen.profile.ProfileScreen
 
 import com.fahad.auth_fierbase_bottomnavigation.ui.screen.register.RegisterScreen
 import com.fahad.auth_fierbase_bottomnavigation.ui.screen.register.RegisterViewModel
+
 import com.fahad.auth_fierbase_bottomnavigation.ui.theme.AuthfierbaseBottomNavigationTheme
 
 
@@ -74,7 +77,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background
                 ) {
 
-                    MainScreen()
+                  RootNavigationGraph(navController = rememberNavController())
 
 
                 }
@@ -190,32 +193,3 @@ private fun checkAuthenticationState(navController: NavController, userDataViewM
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

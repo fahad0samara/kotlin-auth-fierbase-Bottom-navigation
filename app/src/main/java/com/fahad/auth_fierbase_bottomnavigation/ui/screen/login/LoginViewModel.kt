@@ -7,6 +7,7 @@ import androidx.navigation.NavController
 import com.fahad.auth_fierbase_bottomnavigation.domain.model.Response
 import com.fahad.auth_fierbase_bottomnavigation.domain.model.User
 import com.fahad.auth_fierbase_bottomnavigation.domain.repository.AuthRepository
+import com.fahad.auth_fierbase_bottomnavigation.ui.AuthScreen
 import com.fahad.auth_fierbase_bottomnavigation.ui.UserDataViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -39,7 +40,7 @@ class LoginViewModel @Inject constructor(private val repository: AuthRepository,
                 val user = loginResult.data
 
                 userDataViewModel.setUser(user)
-                navController.navigate("profile")
+              navController.navigate(AuthScreen.Profile.route)
             }
 
 

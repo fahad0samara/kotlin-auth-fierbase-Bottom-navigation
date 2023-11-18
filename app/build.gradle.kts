@@ -86,27 +86,25 @@ dependencies {
 
 
     //Dagger Hilt
-    implementation("com.google.dagger:hilt-android:2.48.1")
-    ksp("com.google.dagger:hilt-android-compiler:2.48.1")
+    implementation(libs.hilt.android)
+    ksp(libs.hiltAndroidCompiler)
     //Room
-    val room_version = "2.6.0"
-    implementation("androidx.room:room-runtime:$room_version")
-    ksp("androidx.room:room-compiler:2.6.0")
-
-    implementation ("androidx.room:room-ktx:2.6.0")
+  implementation(libs.androidx.room.runtime.v260)
+    ksp(libs.androidx.room.compiler.v260)
+  implementation (libs.androidx.room.ktx.v260)
 
     //lifecycle
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
+    implementation(libs.androidx.lifecycle.viewmodel.compose.v262)
     //navigation
-
-    implementation(libs.navigation.compose)
-    implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
+  implementation(libs.navigation.compose)
+    implementation(libs.androidx.hilt.navigation.compose.v100)
 
 
 
 
     //firebase
     implementation(platform("com.google.firebase:firebase-bom:32.5.0"))
+    //noinspection UseTomlInstead
     implementation("com.google.firebase:firebase-analytics-ktx")
     implementation("com.google.firebase:firebase-auth-ktx")
     implementation(libs.firebase.storage.ktx)

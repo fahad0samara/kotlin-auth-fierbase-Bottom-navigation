@@ -38,6 +38,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.fahad.auth_fierbase_bottomnavigation.domain.model.Response
+import com.fahad.auth_fierbase_bottomnavigation.ui.AuthScreen
 import com.fahad.auth_fierbase_bottomnavigation.ui.screen.compenets.DisplayError
 import com.fahad.auth_fierbase_bottomnavigation.ui.screen.compenets.EmailAndPasswordInputs
 import com.fahad.auth_fierbase_bottomnavigation.ui.screen.compenets.NavigationText
@@ -171,7 +172,7 @@ fun RegisterScreen(
             NavigationText(
                 text = "Already have an account? Login",
                 onClick = {
-                    navController.navigate("login")
+                  navController.navigate(AuthScreen.Login.route)
                 }
             )
         }
