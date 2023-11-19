@@ -42,7 +42,7 @@ import com.fahad.auth_fierbase_bottomnavigation.ui.screen.login.LoginViewModel
 import com.fahad.auth_fierbase_bottomnavigation.ui.screen.navigation.RootNavigation
 
 import com.fahad.auth_fierbase_bottomnavigation.ui.screen.bottomScreen.profile.EditProfileScreen
-import com.fahad.auth_firebase.ui.screen.profile.ProfileScreen
+import com.fahad.auth_fierbase_bottomnavigation.ui.screen.bottomScreen.profile.ProfileScreen
 
 import com.fahad.auth_fierbase_bottomnavigation.ui.screen.register.RegisterScreen
 import com.fahad.auth_fierbase_bottomnavigation.ui.screen.register.RegisterViewModel

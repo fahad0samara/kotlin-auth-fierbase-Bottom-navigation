@@ -18,7 +18,7 @@ import com.fahad.auth_fierbase_bottomnavigation.ui.screen.bottomScreen.SearchDet
 import com.fahad.auth_fierbase_bottomnavigation.ui.screen.bottomScreen.Settings
 import com.fahad.auth_fierbase_bottomnavigation.ui.screen.navigation.Graph
 import com.fahad.auth_fierbase_bottomnavigation.ui.screen.bottomScreen.profile.EditProfileScreen
-import com.fahad.auth_firebase.ui.screen.profile.ProfileScreen
+import com.fahad.auth_fierbase_bottomnavigation.ui.screen.bottomScreen.profile.ProfileScreen
 
 @Composable
 fun BottomBarNavigation(navController: NavHostController) {

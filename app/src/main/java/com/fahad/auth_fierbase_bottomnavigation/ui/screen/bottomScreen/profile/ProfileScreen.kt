@@ -1,4 +1,4 @@
-package com.fahad.auth_firebase.ui.screen.profile
+package com.fahad.auth_fierbase_bottomnavigation.ui.screen.bottomScreen.profile
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -40,6 +40,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.fahad.auth_fierbase_bottomnavigation.ui.UserDataViewModel
+import com.fahad.auth_fierbase_bottomnavigation.ui.screen.navigation.Graph
+import com.fahad.auth_fierbase_bottomnavigation.ui.screen.navigation.auth.AuthScreen
 import com.fahad.auth_fierbase_bottomnavigation.util.Button.LoadingButton
 import com.fahad.auth_fierbase_bottomnavigation.util.snackBar.SnackbarWrapperProfile
 
@@ -142,7 +144,7 @@ fun ProfileScreen(
             Button(
                 onClick = {
                     userDataViewModel.logout()
-                    navController.navigate("login")
+                  navController.navigate(route = AuthScreen.LOGIN.route)
                 },
                 modifier = Modifier
                     .padding(top = 8.dp)

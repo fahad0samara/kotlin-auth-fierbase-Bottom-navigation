@@ -83,7 +83,7 @@ fun checkAuthenticationState(navController: NavController, userDataViewModel: Us
     }
   } else {
     // Navigate to Login Screen
-    navController.navigate(AuthScreen.Login.route) {
+    navController.navigate(AuthScreen.LOGIN.route) {
       popUpTo(Graph.AUTHENTICATION) {
         inclusive = true
       }

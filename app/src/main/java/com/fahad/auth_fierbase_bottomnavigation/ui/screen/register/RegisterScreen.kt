@@ -163,7 +163,7 @@ fun RegisterScreen(
             LoadingButton(
                 text = "Register",
                 isLoading = registerViewModel.isLoading,
-                enabled = !(email.isBlank() || password.isBlank() || name.isBlank() || photoUri == null),
+                enabled = !(email.isBlank() || password.isBlank() || name.isBlank() ),
                 textloading = "Registering...",
                 onClick = {
                     registerViewModel.registerUser(email, password, name, photoUri.toString(), navController)
@@ -172,7 +172,7 @@ fun RegisterScreen(
             NavigationText(
                 text = "Already have an account? Login",
                 onClick = {
-                  navController.navigate(AuthScreen.Login.route)
+                  navController.navigate(AuthScreen.LOGIN.route)
                 }
             )
         }
