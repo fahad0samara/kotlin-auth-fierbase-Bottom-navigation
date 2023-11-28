@@ -1,6 +1,9 @@
 package com.fahad.auth_fierbase_bottomnavigation.ui
 
+import android.content.Intent
 import android.net.Uri
+import androidx.compose.ui.ExperimentalComposeUiApi
+import androidx.core.app.ActivityCompat
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavController
@@ -40,6 +43,13 @@ class UserDataViewModel @Inject constructor(private val authRepository: AuthRepo
 
     private val _isEmailVerified = MutableStateFlow(false)
     val isEmailVerified: StateFlow<Boolean> = _isEmailVerified
+
+  private val _showLogoutDialog = MutableStateFlow(false)
+  val showLogoutDialog: StateFlow<Boolean> = _showLogoutDialog
+
+  fun setShowLogoutDialog(show: Boolean) {
+    _showLogoutDialog.value = show
+  }
 
 
     fun getUserData() {
@@ -145,12 +155,19 @@ class UserDataViewModel @Inject constructor(private val authRepository: AuthRepo
 
 
 
-    fun logout() {
-        viewModelScope.launch {
-            authRepository.logout()
-            _user.value = null
-        }
+  @OptIn(ExperimentalComposeUiApi::class)
+  fun logout(
+    navController: NavController
+  ) {
+    viewModelScope.launch {
+      _user.value = null
+      val intent = Intent(navController.context, MainActivity::class.java)
+      ActivityCompat.finishAffinity(navController.context as MainActivity)
+      navController.context.startActivity(intent)
+      authRepository.logout()
+
     }
+  }
 }
 
 

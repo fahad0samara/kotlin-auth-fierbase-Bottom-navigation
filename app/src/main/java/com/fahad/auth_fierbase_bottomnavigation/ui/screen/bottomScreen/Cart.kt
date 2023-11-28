@@ -12,10 +12,10 @@ import androidx.compose.ui.Modifier
 @Composable
 fun Cart() {
   Box(
-    contentAlignment = androidx.compose.ui.Alignment.Center,
-    modifier = androidx.compose.ui.Modifier.fillMaxSize().background(MaterialTheme.colorScheme.primary)
+    contentAlignment = Alignment.Center,
+    modifier = Modifier.fillMaxSize().background(MaterialTheme.colorScheme.primary)
   ){
-    Text(text = "Home",
+    Text(text = "Cart",
       style = MaterialTheme.typography.labelLarge,
       color = MaterialTheme.colorScheme.onPrimary
     )

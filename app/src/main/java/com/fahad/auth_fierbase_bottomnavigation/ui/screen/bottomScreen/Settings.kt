@@ -15,7 +15,7 @@ fun Settings() {
     contentAlignment = Alignment.Center,
     modifier = Modifier.fillMaxSize().background(MaterialTheme.colorScheme.primary)
   ){
-    Text(text = "Home",
+    Text(text = "Settings",
       style = MaterialTheme.typography.labelLarge,
       color = MaterialTheme.colorScheme.onPrimary
     )
