@@ -1,6 +1,8 @@
 package com.fahad.auth_fierbase_bottomnavigation.ui.screen.navigation
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -14,6 +16,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -22,6 +25,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.fahad.auth_fierbase_bottomnavigation.R
 import com.fahad.auth_fierbase_bottomnavigation.ui.UserDataViewModel
 import com.fahad.auth_fierbase_bottomnavigation.ui.screen.login.LoginViewModel
 import com.fahad.auth_fierbase_bottomnavigation.ui.screen.navigation.auth.AuthNavigation
@@ -100,26 +104,27 @@ object Graph {
 }
 @Composable
 fun SplashScreen() {
-    Box(
-        modifier = Modifier
-        .fillMaxSize()
-        .background(Color.White), // Set a background color for the splash screen
-        contentAlignment = Alignment.Center
+  Box(
+    modifier = Modifier.fillMaxSize(),
+
+    contentAlignment = Alignment.Center
+  ) {
+    // Add your splash screen content
+    Column(
+      horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center
     ) {
-        // Add your splash screen content
-        Column(
-        horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-        Text(
-            text = "Auth Firebase",
-            fontSize = 40.sp,
-            fontWeight = FontWeight.Bold,
-            color = MaterialTheme.colorScheme.primary
-        )
-        Spacer(modifier = Modifier.height(16.dp))
-        CircularProgressIndicator(color = MaterialTheme.colorScheme.primary)
-        }
+
+      Image(
+        painter = painterResource(id = R.drawable.logo),
+
+        contentDescription = null,
+        alignment = Alignment.Center,
+        modifier = Modifier.height(300.dp)
+
+      )
+
     }
+  }
 
 }
 
